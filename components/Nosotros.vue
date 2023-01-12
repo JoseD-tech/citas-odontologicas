@@ -1,7 +1,7 @@
 <template>
     <section class="my-20">
-        <div class=" grid grid-cols-2 gap-4">
-            <div class="self-center justify-self-center">
+        <div class="grid grid-rows-2 sm:grid-rows-none sm:grid-cols-2 gap-4">
+            <div class="self-center justify-self-center order-2 sm:order-1">
                 <img src="@/assets/img/about.png" alt="About">
             </div>
             <div class="self-center justify-self-center">
@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <div class="mt-10 grid grid-cols-3 gap-5">
+        <div class="mt-10 grid sm:grid-cols-3 gap-5">
             <Card icon="ph:handshake" title="Transparency" text="Transparency breeds trust, and clients put significant trust in us from day one."></Card>
             <Card icon="ph:handshake" title="Transparency" text="Transparency breeds trust, and clients put significant trust in us from day one."></Card>
             <Card icon="ph:handshake" title="Transparency" text="Transparency breeds trust, and clients put significant trust in us from day one."></Card>
