@@ -1,3 +1,10 @@
+<script setup>
+import { useContenido } from '@/store/store'
+
+const cards = ref(useContenido().cardAbout)
+
+</script>
+
 <template>
     <section class="my-20">
         <div class="grid grid-rows-2 sm:grid-rows-none sm:grid-cols-2 gap-4">
@@ -16,9 +23,7 @@
         </div>
 
         <div class="mt-10 grid sm:grid-cols-3 gap-5">
-            <Card icon="ph:handshake" title="Transparency" text="Transparency breeds trust, and clients put significant trust in us from day one."></Card>
-            <Card icon="ph:handshake" title="Transparency" text="Transparency breeds trust, and clients put significant trust in us from day one."></Card>
-            <Card icon="ph:handshake" title="Transparency" text="Transparency breeds trust, and clients put significant trust in us from day one."></Card>
+            <Card v-for="(card, key) in cards" :key="key" :icon="card.icon" :title="card.title" :text="card.text"></Card>
         </div>
         
     </section>

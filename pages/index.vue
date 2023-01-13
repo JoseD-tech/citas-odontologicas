@@ -27,6 +27,7 @@
         
         <main class="w-11/12 mx-auto">
             <Nosotros />
+            <Servicios />
         </main>
 
     </div>
