@@ -1,0 +1,15 @@
+<template>
+    <section class="my-20">
+        <div class="sm:px-10 mx-auto">
+            <h2 class="text-center font-bold text-gray-700 uppercase text-3xl">Contactanos</h2>
+            <div class="grid sm:grid-cols-2 gap-4 mt-10">
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7446.785963127912!2d-70.24209568358293!3d8.615440827181889!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e7b578e8671fd83%3A0xeae1ae9ac67426ca!2sUniversidad%20Nacional%20Experimental%20de%20los%20LLanos%20Occidentales%20%22Ezequiel%20Zamora%22!5e0!3m2!1ses!2sve!4v1674050924181!5m2!1ses!2sve" width="100%" height="450" style="border:0;" loading="lazy"   referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="bg-gray-500">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

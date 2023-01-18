@@ -20,7 +20,7 @@
             <div class="absolute bottom-0 left-0 right-0 h-28"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
                     style="height: 100%; width: 100%;">
                     <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                        style="stroke: none; fill: #ff6600; opacity: 0.5;"></path>
+                        style="stroke: none; fill: #ff6600;"></path>
                 </svg>
             </div>
         </header>
@@ -28,7 +28,13 @@
         <main class="w-11/12 mx-auto">
             <Nosotros />
             <Servicios />
+            <Equipo />
+            <Contacto />
         </main>
+
+        <footer class="mt-10 py-4 bg-[#ff6600]">
+            <p class="text-white font-bold text-center">Todos los derechos reservados. &copy; Sinapsys</p>
+        </footer>
 
     </div>
 </template>
