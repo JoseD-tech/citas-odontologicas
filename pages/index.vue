@@ -28,12 +28,44 @@
         <main class="w-11/12 mx-auto">
             <Nosotros />
             <Servicios />
-            <Equipo />
             <Contacto />
         </main>
 
-        <footer class="mt-10 py-4 bg-[#ff6600]">
-            <p class="text-white font-bold text-center">Todos los derechos reservados. &copy; Sinapsys</p>
+        <footer class="mt-10 py-4 px-10">
+            <div class="grid grid-cols-4 gap-4">
+                <div class="col-span-2">
+                    <p>No se enfrentará a un menú telefónico ridículamente largo cuando nos llame. Su correo electrónico no irá a la bandeja de entrada de AREA 51, para que nunca más lo vean ni lo escuchen. En EYSS, brindamos el mismo servicio excepcional que queremos experimentar nosotros mismos.</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold text-gray-700 mb-4">Contactos</h5>
+                    <p class="mb-4">
+                        <Icon name="flag:ve-4x3" size="20" class="mr-2"/>
+                        0414-5454545
+                    </p>
+                    <p>correo@gmail.com</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold text-gray-700 mb-4">Siguenos</h5>
+                    <ul class="flex text-orange-500">
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                                <Icon name="mdi:facebook" size="30" class="mr-2"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                                <Icon name="mdi:instagram" size="30" class="mr-2"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                                <Icon name="mdi:twitter" size="30" class="mr-2"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center mt-10">&copy; Sinapsys. Todos los derechos reservados.</p>
         </footer>
 
     </div>

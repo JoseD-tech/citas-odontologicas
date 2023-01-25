@@ -12,7 +12,7 @@ const text = ref(props.text)
 
 <template>
     <div>
-        <div class="flex items-center justify-center mx-auto rounded-full bg-orange-500/80 text-white w-20 h-20">
+        <div class="flex items-center justify-center mx-auto rounded-full bg-orange-500 text-white w-20 h-20">
             <Icon :name="icon" size="50px"/>
         </div>
         <div class="mt-4 text-center">
