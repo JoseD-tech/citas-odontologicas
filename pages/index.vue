@@ -28,11 +28,12 @@
         <main class="w-11/12 mx-auto">
             <Nosotros />
             <Servicios />
+            <Equipo />
             <Contacto />
         </main>
 
         <footer class="mt-10 py-4 px-10">
-            <div class="grid grid-cols-4 gap-4">
+            <div class="grid sm:grid-cols-4 gap-4">
                 <div class="col-span-2">
                     <p>No se enfrentará a un menú telefónico ridículamente largo cuando nos llame. Su correo electrónico no irá a la bandeja de entrada de AREA 51, para que nunca más lo vean ni lo escuchen. En EYSS, brindamos el mismo servicio excepcional que queremos experimentar nosotros mismos.</p>
                 </div>
