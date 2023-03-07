@@ -4,12 +4,10 @@
             <div class="grid sm:grid-cols-2 gap-4 justify-center content-center px-10">
                 <div class="self-center justify-self-center">
                     <div>
-                        <h2 class="text-4xl font-bold text-gray-700 mb-8">WE ARE READY TO <br> BOOST YOUR BUSINESS!</h2>
-                        <p class="mb-8 font-normal text-lg text-gray-600">We are truly a cost-effective partner which
-                            delivers high-quality products for amazingly reasonable prices.</p>
+                        <h2 class="text-4xl font-bold text-gray-700 mb-8">ESTAMOS LISTOS PARA IMPULSA TU NEGOCIO</h2>
+                        <p class="mb-8 font-normal text-lg text-gray-600 capitalize">Somos un socio rentable que ofrece productos de alta calidad a precios increíblemente razonables.</p>
                         <button
-                            class="rounded-md bg-orange-500 py-2 px-4 text-white font-bold hover:shadow-md hover:bg-white hover:text-orange-500 border hover:border-orange-500/50 hover:shadow-orange-500/50 transition-all duration-300 ease-in-out">Our
-                            Services</button>
+                            class="rounded-md bg-orange-500 py-2 px-4 text-white font-bold hover:shadow-md hover:bg-white hover:text-orange-500 border hover:border-orange-500/50 hover:shadow-orange-500/50 transition-all duration-300 ease-in-out">Nuestros Servicios</button>
                     </div>
                 </div>
                 <div class="hidden sm:block self-center justify-self-center">

@@ -25,7 +25,7 @@ const servicioData = (id) => {
             <div class="self-center justify-self-center py-4">
                 <h3 class="text-3xl font-bold text-gray-700 mb-2 capitalize">{{ servicio.title }}</h3>
                 <p class="text-base font-light text-orange-500 mb-6">{{ servicio.span }}</p>
-                <p class="font-normal text-lg text-gray-600/80">{{ servicio.text }}</p>
+                <p class="font-normal text-lg text-gray-600/80 text-justify">{{ servicio.text }}</p>
                 <img src="@/assets/img/services.png" alt="Servicios" class="mx-auto">
             </div>
         </div>

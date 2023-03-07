@@ -6,25 +6,25 @@ export const useContenido = defineStore('Contenido', {
     cardAbout: [
         {
             icon: 'ph:handshake-fill',
-            title: 'Transparency',
-            text: 'Transparency breeds trust, and clients put significant trust in us from day one.',
+            title: 'Transparencia',
+            text: 'Nos esforzamos por crear un entorno de apertura y confianza con nuestros clientes desde el principio, y es esta confianza la que nos permite trabajar juntos para alcanzar nuestros objetivos comunes.',
         },
         {
             icon: 'carbon:piggy-bank',
-            title: 'Financing',
-            text: 'We aim to help our clients get their ideas off the ground, and, at the same time, lower their risk by offering financing solutions in three-, six-, and twelve-month packages which allow customers to obtain immediate returns with low investments of capital.',
+            title: 'Finanzas',
+            text: 'Ofrecemos una gama de soluciones de financiación que pueden ayudarle a poner en marcha su negocio y maximizar su potencial. Proporcionamos paquetes flexibles a tres, seis y doce meses que le permiten invertir en las soluciones más recientes, innovadoras y eficaces sin necesidad de una gran inversión de capital.',
         },
         {
             icon: 'fluent:handshake-24-regular',
-            title: 'Dedication',
-            text: 'At EYSS, we are very hard workers and we are used to overcoming challenges on a daily basis, giving us a competitive advantage.',
+            title: 'Dedicacíon',
+            text: 'Nos dedicamos a ayudarle a alcanzar sus objetivos proporcionándole las soluciones más recientes, innovadoras y eficaces. Nuestro equipo de profesionales está comprometido a ayudarle a mantenerse por delante de la competencia y maximizar su potencial.',
         },
     ],
     Servicios: [
         {
-            title: 'Digital Transformation',
-            text:'Digital transformation helps automate processes in different areas within an organization, providing efficiency. We apply different instruments that form a set of strategies to promote your company and brand.',
-            span: 'Workflow management, digitization of processes and automation.',
+            title: 'Transformación digital',
+            text:'La transformación digital ayuda a automatizar procesos en diferentes áreas dentro de una   organización, aportando eficiencia. Aplicamos diferentes instrumentos que forman un conjunto de estrategias para promocionar su empresa y su marca. Nuestro equipo de profesionales está comprometido a ayudarle a mantenerse por delante de la competencia y maximizar su potencial. Desde la tokenización de sus activos digitales hasta el desarrollo de tecnologías holísticas para la economía digital y Edtech, nos centramos en proporcionar a nuestros clientes las herramientas y los recursos que necesitan para tener éxito. Permítanos ayudarle a llevar su negocio al siguiente nivel y a desarrollar todo su potencial.',
+            span: 'Gestión de flujos de trabajo, digitalización de procesos y automatización.',
             icon: 'digital'
         },
         {

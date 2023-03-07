@@ -13,12 +13,7 @@ const cards = ref(useContenido().cardAbout)
             </div>
             <div class="self-center justify-self-center">
                 <h2 class="text-3xl mb-8 font-bold uppercase text-gray-700">Sobre Nosotros</h2>
-                <p class="text-gray-600 font-normal text-lg">We are a young global company that’s still full of
-                    experience. With a young and dynamic team of developers, designers, marketers and project managers,
-                    EYSS’s top management has more than 15 years of experience in developing solutions for industries
-                    like construction, education, training, manufacturing and recycling, just to mention a few. Today,
-                    EYSS is one of the most successful companies in the UK, Australia and Venezuela with customers all
-                    over the world.</p>
+                <p class="text-gray-600 font-normal text-lg text-justify">En Sinapsys, nuestro objetivo es ayudar a las empresas a tener éxito aprovechando el poder de la tecnología, la personalización y la empatía. Entendemos que cada empresa es única, por lo que adaptamos nuestras soluciones para satisfacer sus necesidades individuales. Nuestro equipo de profesionales experimentados cuenta con una amplia experiencia en el desarrollo y la ejecución de proyectos innovadores que impulsan el éxito.</p>
             </div>
         </div>
 
