@@ -20,10 +20,14 @@
                     <h5 class="text-lg font-bold text-gray-700 mb-4">Telefonos:</h5>
                     <p class="mb-4">
                         <Icon name="flag:ve-4x3" size="20" class="mr-2"/>
-                        0414-5454545
+                        0273-5410074
+                    </p>
+                    <p class="mb-4">
+                        <Icon name="flag:ve-4x3" size="20" class="mr-2"/>
+                        0273-5302200
                     </p>
                     <h5 class="text-lg font-bold text-gray-700 mb-4">E-mail:</h5>
-                    <p>correo@gmail.com</p>
+                    <p>synapsysunellez@gmail.com</p>
                 </div>
             </div>
         </div>

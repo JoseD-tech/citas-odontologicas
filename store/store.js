@@ -28,38 +28,38 @@ export const useContenido = defineStore('Contenido', {
             icon: 'digital'
         },
         {
-            title: 'Staff Augmentation',
-            text:'Create or expand your technical team with dedicated offshore developers based in our office. You can build your own team abroad for a fraction of the cost of assembling one domestically.',
+            title: 'Staff Personal',
+            text:'Contamos con un equipo de profesionales altamente experimentados, con habilidades y destrezas específicas muy importantes para llevar a cabo proyectos robustos y de gran envergadura, además se caracterizan por trabajar de forma ágil, con flexibilidad para ajustarse al cliente y entregando resultados de la más alta calidad.',
             span: 'Create or expand your technical team with dedicated offshore developers.',
             icon: 'personal'
         },
         {
-            title: 'Graphic Design',
-            text:'We are able to offer our clients excellent graphic design services which includes branding and digital design, among other design-related services.',
+            title: 'Diseño Grafico',
+            text:'Podemos ofrecer a nuestros clientes excelentes servicios de diseño gráfico que incluyen branding, diseño digital, imágenes corporativas, imágenes publicitarias y de confección entre otros servicios relacionados con el diseño.',
             span: 'Logos, videos, banners, business cards, flyers.',
             icon: 'grafico'
         },
         {
-            title: 'Web Development',
-            text:'We deliver bespoke-quality web development for your website or web application.',
+            title: 'Desarrollo Web',
+            text:'Desarrollamos aplicaciones web desarrolladas para cumplir los requerimientos específicos en cada proyecto, incluyendo integración con sistemas en uso, Además de un aseguramiento de la calidad verifica que el software cumpla requisitos de seguridad informática y sus operaciones sean constantes en todos los escenarios. Desarrollados con lenguajes de programación y herramientas actuales que lo hacen robustos, fáciles de mantener y flexibles a cambios posteriores.',
             span: 'Websites, landing pages, custom web systems, web design, WordPress and PrestaShop',
             icon: 'web'
         },
         {
             title: 'Digital Marketing',
-            text:'Get the most of your marketing budget by investing in Digital Marketing. Being able to keep track of your efforts is one of the many advantages of using digital marketing.',
+            text:'En Sinapsys tenemos el compromiso de ayudar a nuestros clientes e instituciones públicas a asesorarte el mejor manejo, diseño y producción digital y audiovisual, para que puedan impulsar sus productos por las redes sociales, mejorando la Optimización y Gestión de los procesos',
             span: 'SEO/SEM, community manager, email marketing, branding, campaign ads.',
             icon: 'marketing'
         },
         {
             title: 'Custom Software Development',
-            text:'We build custom business software that does what our clients want need it to do. We pride ourselves on building some of the most complex software on the market.',
+            text:'Nos especializamos en la creación de software personalizado que te ofrece una ventaja competitiva. Ya sea a través de una aplicación, una aplicación web, una plataforma de datos o cualquier otra cosa que quieras crear, justo como quieras que sea.',
             span: 'business software that does what our clients want need it to do',
             icon: 'desarrollo'
         },
         {
             title: 'Consultancy',
-            text:'We help companies make informed technology decisions. Our experienced consultants will help you understand your companys best options to increase efficiency.',
+            text:'Nos especializamos en continuidad operativa, ofrecemos un servicio oportuno, de calidad y garantizado. Realizamos soporte remoto y de ser necesario hacemos visitas técnicas, Desarrollamos Mantenimiento Preventivo y Correctivo, Asesoramiento en Instalación de Equipos de Computación, Redes, Cámaras de Seguridad, Cercas Eléctricas.',
             span: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
             icon: 'consultoria'
         },
