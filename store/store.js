@@ -6,12 +6,12 @@ export const useContenido = defineStore('Contenido', {
     cardAbout: [
         {
             icon: 'ph:handshake-fill',
-            title: 'Transparencia',
+            title: 'Salud',
             text: 'Nos esforzamos por crear un entorno de apertura y confianza con nuestros clientes desde el principio, y es esta confianza la que nos permite trabajar juntos para alcanzar nuestros objetivos comunes.',
         },
         {
             icon: 'carbon:piggy-bank',
-            title: 'Finanzas',
+            title: 'Cuidado',
             text: 'Ofrecemos una gama de soluciones de financiación que pueden ayudarle a poner en marcha su negocio y maximizar su potencial. Proporcionamos paquetes flexibles a tres, seis y doce meses que le permiten invertir en las soluciones más recientes, innovadoras y eficaces sin necesidad de una gran inversión de capital.',
         },
         {

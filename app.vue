@@ -18,7 +18,11 @@ useHead({
   <NuxtLayout />
 </template>
 
-<style scoped>
+<style>
+
+html {
+  scroll-behavior: smooth;
+}
 
 html::-webkit-scrollbar {
   width: 5px;
@@ -28,11 +32,12 @@ html::-webkit-scrollbar {
 
 html::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  background-color: #ff6600;
+  background-color: #3fade4;
 }
 
 body {
   background-color: #fbfbfb;
 }
+
 
 </style>

@@ -6,14 +6,14 @@ const cards = ref(useContenido().cardAbout)
 </script>
 
 <template>
-    <section class="my-20">
+    <section class="my-20" id="nosotros">
         <div class="grid grid-rows-2 sm:grid-rows-none sm:grid-cols-2 gap-4">
             <div class="self-center justify-self-center order-2 sm:order-1">
-                <img src="@/assets/img/about.png" alt="About">
+                <img src="@/assets/img/banker-b.png" alt="About">
             </div>
             <div class="self-center justify-self-center">
                 <h2 class="text-3xl mb-8 font-bold uppercase text-gray-700">Sobre Nosotros</h2>
-                <p class="text-gray-600 font-normal text-lg text-justify">En Sinapsys, nuestro objetivo es ayudar a las empresas a tener éxito aprovechando el poder de la tecnología, la personalización y la empatía. Entendemos que cada empresa es única, por lo que adaptamos nuestras soluciones para satisfacer sus necesidades individuales. Nuestro equipo de profesionales experimentados cuenta con una amplia experiencia en el desarrollo y la ejecución de proyectos innovadores que impulsan el éxito.</p>
+                <p class="text-gray-600 font-normal text-lg text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur tempore sapiente dolores quasi veniam temporibus impedit est ea, esse repellendus possimus nemo quod totam et veritatis eligendi tempora perferendis sit illo! Officia nulla doloribus nobis itaque molestias pariatur beatae illo nihil minus harum, aliquam veniam voluptates optio quo consectetur odio?</p>
             </div>
         </div>
 

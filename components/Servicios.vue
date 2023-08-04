@@ -13,21 +13,83 @@ const servicioData = (id) => {
 
 
 <template>
-    <section class="my-20">
-        <h2 class="text-3xl font-bold text-gray-700 text-center mb-6 sm:hidden">Nuestros servicios</h2>
-        <div class="grid sm:grid-cols-2 gap-4">
-            <div class="bg-gray-500/10 grid grid-rows-[repeat(8, minmax(0, 1fr))]">
-                <button class="w-full grid grid-cols-4 gap-x-4 col-span-4" v-for="(servicio, key) in servicios" :key="key" @click="servicioData(key)">
-                    <img :src="`/servicios-icon/${servicio.icon}.png`" :alt="servicio.title" class="self-center justify-self-center col-start-1 col-end-2 h-24">
-                    <span class="col-start-2 col-end-5 self-center" style="justify-self:left;">{{ servicio.title }}</span>
-                </button>
-            </div>
-            <div class="self-center justify-self-center py-4">
-                <h3 class="text-3xl font-bold text-gray-700 mb-2 capitalize">{{ servicio.title }}</h3>
-                <p class="text-base font-light text-orange-500 mb-6">{{ servicio.span }}</p>
-                <p class="font-normal text-lg text-gray-600/80 text-justify">{{ servicio.text }}</p>
-                <img src="@/assets/img/services.png" alt="Servicios" class="mx-auto">
+    <div class="my-20">
+        <section id="atencion"
+            class="my-20 flex flex-col w-full h-[600px] bg-cover bg-fixed bg-center flex justify-center items-center bg-img">
+            <h1 class="text-white text-5xl font-semibold mt-20 mb-10 w-1/2 text-center">
+                Sonrisas que inspiran confianza, cuidando tu salud bucal con pasión y experiencia
+            </h1>
+        </section>
+        <div class="container mx-auto px-4">
+            <div class="items-center flex flex-wrap">
+                <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
+                    <img alt="..." class="max-w-full rounded-lg shadow-lg"
+                        src="https://images.pexels.com/photos/3845745/pexels-photo-3845745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                </div>
+                <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
+                    <div class="md:pr-12">
+                        <div
+                            class="text-[#3fade4] p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-[#3fade4]/80">
+                            <Icon name="mi:clock" size="50" class="text-white" />
+                        </div>
+                        <h3 class="text-3xl font-semibold">Horario de atención </h3>
+                        <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
+                            Estamos comprometidos con brindar el mejor cuidado dental a nuestros pacientes y adaptarnos a sus necesidades. Nuestro horario de atención está diseñado para ofrecerles la máxima conveniencia y flexibilidad.
+                        </p>
+                        <ul class="list-none mt-6">
+                            <li class="py-2">
+                                <div class="flex items-center">
+                                    <div>
+                                        <span
+                                            class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-[#3fade4] bg-[#3fade4]/60 mr-3">
+                                            <Icon name="mi:calendar" size="30" class="text-white" />
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-blueGray-500">
+                                            Lunes a viernes 9:00 a.m - 7:30 p.m
+                                        </h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="py-2">
+                                <div class="flex items-center">
+                                    <div>
+                                        <span
+                                            class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-[#3fade4] bg-[#3fade4]/60 mr-3">
+                                            <Icon name="mi:calendar" size="30" class="text-white" />
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-blueGray-500">
+                                            Sábado 9:00 a.m - 7:00 p.m
+                                        </h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="py-2">
+                                <div class="flex items-center">
+                                    <div>
+                                        <span
+                                            class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-[#3fade4] bg-[#3fade4]/60 mr-3">
+                                            <Icon name="mi:calendar" size="30" class="text-white" />
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-blueGray-500">Domingo 10:00 a.m - 2:00 p.m</h4>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 </template>
+
+<style>
+.bg-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/img/cta-bg.jpg");
+}
+</style>

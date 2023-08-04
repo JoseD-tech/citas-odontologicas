@@ -1,421 +1,62 @@
 <script setup>
-    const el = ref(null)
-    const { width, height } = useElementSize(el)
+
+// Configuracion Slider de Dentistas
+const el = ref(null)
+const { width, height } = useElementSize(el)
+
+//peticion de la API del landing
+const { data } = await useFetch('https://endpointsco-production.up.railway.app/api/landingPage')
+
+// Variables para guardar datos de los dentistas
+const dentistas = data.value.Dentists
+
 </script>
 
-<template>
-    <div ref="el">
-        <h3 class="font-bold text-3xl text-gray-700 uppercase text-center">Nuestro Equipo</h3>
+<template >
+    <div ref="el" id="odontologos">
+        <h3 class="font-bold text-3xl text-gray-700 uppercase text-center">Nuestros Odontologos</h3>
         <div>
-           <Swiper 
-            :slidesPerView="width < 500 ? 1 : 3" 
-            :spaceBetween="30" 
-            :slidesPerGroup="width < 500 ? 1 : 3"
-            :pagination="{clickable: true,}"
-            :modules="[SwiperPagination]"
-            >
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
+            <Swiper :slidesPerView="width < 500 ? 1 : 3" :spaceBetween="30" :slidesPerGroup="width < 500 ? 1 : 3"
+                :pagination="{ clickable: true, }" :modules="[SwiperPagination]">
+
+                <swiper-slide class="my-20" v-for="dentista in dentistas" :key="dentista"> 
+                    <div
+                        class="relative w-full group max-w-md min-w-0 mx-auto mt-6 mb-6 break-words bg-white border shadow-md shadow-[#3fade4]  md:max-w-sm rounded-xl">
+                        <div class="pb-6">
+                            <div class="flex flex-wrap justify-center">
+                                <div class="flex justify-center w-full">
+                                    <div class="relative">
+                                        <img :src="dentista.UrlPicture"
+                                            class="dark:shadow-xl border-[#3fade4] rounded-full align-middle border-8 absolute -m-16 -ml-18 lg:-ml-16 max-w-[150px]" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-24 text-center">
+                                <h3 class="mb-1 text-2xl font-bold leading-normal text-black">
+                                    {{ dentista.FullName }}</h3>
+                                <div class="flex flex-row justify-center w-full mx-auto space-x-2 text-center">
+                                    <div class="text-sm font-bold tracking-wide text-[#3fade4] font-mono">
+                                        Dentista</div>
+                                </div>
+
+                            </div>
+                            <div class="pt-6 mx-6 mt-6 text-center border-t border-[#3fade4] ">
+                                <div class="flex flex-wrap justify-center">
+                                    <div class="w-full px-6">
+                                        <p class="mb-4 font-light leading-relaxed">
+                                           {{dentista.ProfesionalDescription}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="px-4 py-6 rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="my-20">
-                <div>
-                    <div class="shadow-xl rounded-xl">
-                        <img class="rounded-xl" src="https://images.ctfassets.net/s5uo95nf6njh/646bVsndbSoJf5AomEG4pX/17a607f575c18ac484bc568606b6bea2/evan-you-thumbnail.jpg?w=300&fm=jpg" alt="">
-                    </div>
-                    <div class="rounded-xl bg-white relative -top-20 w-3/4 mx-auto shadow-xl">
-                        <div class="text-orange-500 mb-4">
-                            <Icon name="mdi:facebook" size="30" class="mr-2"/>
-                            <Icon name="mdi:instagram" size="30" class="mr-2"/>
-                            <Icon name="mdi:twitter" size="30" class="mr-2"/>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-xl text-gray-700 mb-2">Evan You</h5>
-                            <span class="block border border-orange-500 w-1/2 mx-auto mb-4"></span>
-                            <p class="text-gray-700/80">Creator Vue</p>
-                        </div>
-                    </div>
-                </div>
-            </swiper-slide>
-        </Swiper> 
+                </swiper-slide>
+
+            </Swiper>
         </div>
-        
+
     </div>
 </template>
 
@@ -433,6 +74,4 @@
     justify-content: center;
     align-items: center;
 }
-
-
 </style>
