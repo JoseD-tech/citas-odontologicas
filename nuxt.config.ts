@@ -12,6 +12,11 @@ export default defineNuxtConfig({
         'nuxt-icon',
         '@pinia/nuxt',
         'nuxt-swiper',
-        '@vueuse/nuxt'
+        '@vueuse/nuxt',
+        '@formkit/nuxt',
+        '@nuxtjs/axios'
     ],
+    axios: {
+        baseURL: 'https://endpointsco-production.up.railway.app/api'
+    }
 })
